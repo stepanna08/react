@@ -1,0 +1,114 @@
+# GIT CHEAT SHEET
+
+## PROBLEM Z safe.directory
+// usuń wszystkie wpisy safe.directory
+$ git config --global --unset safe.directory
+// dodaj nowe safe.directory
+$ git config --global --add safe.directory "/z/<ścieżka_do_repo>"
+
+## GENEROWANIE KLUCZA
+$ mkdir ~/.ssh
+$ cd ~/.ssh
+$ ssh-keygen
+	-> podaj nazwę klucza wraz ze ścieżką np. github-szkola
+	-> podaj hasło do klucza (inne niż do githuba)
+	-> powtórz hasło do klucza (inne niż do githuba)
+
+## DODANIE AGENTA DO GIT BASH
+$ vi ~/.bashrc
+	{INSERT - aktywacja trybu wstawiania}
+	eval "$(ssh-agent -s)";{ENTER}
+	ssh-add ~/.ssh/github-szkola
+	{CTRL+C - wyjście z trybu wstawiania}
+	{:w - zapisz plik}
+	{ENTER}
+	{:q - wyjdź z vi}
+	{ENTER}
+
+## KONFIGURACJA
+--global								# przełącznik - ustaw globalne (dla wszystkich repozytoriów użytkownika)
+										# C:\Users\<user>\.gitconfig
+										# C:\Users\<user>\.config\git\config
+--local									# przełącznik - ustaw lokalne (tylko dla aktualnego repozytorium)
+										# <twojeRepo>/.git/config
+--system								# przełącznik - ustaw systemowe (dla wszystkich użytkowników)
+										# C:\Program Files\Git\etc\gitconfig
+git config list							# Wyświetl konfigurację
+git config list --global				# j.w. globalne
+git config set user.name "Twoje Imię"
+git config set user.email "twoj@email.com"
+
+## TWORZENIE REPOZYTORIUM
+git init								# Inicjalizacja nowego repo
+git clone <url>							# Klonowanie istniejącego repo
+
+## PODSTAWOWE KOMENDY
+git status								# Sprawdź status plików
+git add <plik>							# Dodaj plik do staging
+git add .								# Dodaj wszystkie pliki (niezalecane - można dodać niechciane pliki)
+git commit -m "wiadomość"				# Zatwierdź zmiany
+git commit -am "wiadomość"				# Add + commit (tylko tracked files)
+
+## GAŁĘZIE (BRANCHES)
+git branch								# Lista gałęzi
+git branch <nazwa>						# Utwórz nową gałąź
+git checkout <nazwa>					# Przełącz na gałąź
+git checkout -b <nazwa>					# Utwórz i przełącz na gałąź
+git switch <nazwa>						# Przełącz na gałąź (nowsze)
+git switch -c <nazwa>					# Utwórz i przełącz (nowsze)
+git merge <nazwa>						# Scal gałąź z aktualną
+git branch -d <nazwa>					# Usuń gałąź
+
+## ZDALNE REPOZYTORIA
+git remote -v							# Lista zdalnych repo
+git remote add origin <url>				# Dodaj zdalne repo
+git push origin <branch>				# Wyślij na serwer
+git push -u origin <branch>				# Wyślij i ustaw upstream
+git pull								# Pobierz i scal zmiany
+git fetch								# Pobierz zmiany (bez scalania)
+
+## HISTORIA I LOGI
+git log									# Historia commitów
+git log --oneline						# Historia w jednej linii
+git log --graph							# Historia z grafem
+git diff								# Różnice w plikach
+git diff --staged						# Różnice w staging
+
+## COFANIE ZMIAN
+git restore <plik>						# Cofnij zmiany w pliku
+git restore --staged <plik>				# Usuń plik ze staging
+git reset HEAD~1						# Cofnij ostatni commit (zachowaj zmiany)
+git reset --hard HEAD~1					# Cofnij ostatni commit (usuń zmiany)
+git revert <commit>						# Utwórz commit cofający zmiany
+
+## STASH (SCHOWEK)
+git stash								# Schowaj zmiany
+git stash list							# Lista schowanych zmian
+git stash pop							# Przywróć i usuń ze schowka
+git stash apply							# Przywróć (bez usuwania)
+git stash drop							# Usuń ze schowka
+
+## TAGI
+git tag									# Lista tagów
+git tag <nazwa>							# Utwórz tag
+git tag -a <nazwa> -m "opis"			# Tag z opisem
+git push origin --tags					# Wyślij tagi na serwer
+
+## PRZYDATNE KOMENDY
+git cherry-pick <commit>				# Zastosuj wybrany commit
+git rebase <branch>						# Przenieś commity na inną gałąź
+git blame <plik>						# Kto edytował każdą linię
+git bisect								# Znajdź commit z błędem
+git clean -fd							# Usuń nieśledzone pliki
+
+## ALIASY (SKRÓTY)
+tworzenie aliasów
+	git config --global alias.co checkout
+	git config --global alias.br branch
+	git config --global alias.ci commit
+	git config --global alias.st status
+używanie aliasów
+	git co <nazwa>						# zamiast git checkout <nazwa>
+	git br								# zamiast git branch
+	git ci -m "wiadomość"				# zamiast git commit -m "wiadomość"
+	git st								# zamiast git status
