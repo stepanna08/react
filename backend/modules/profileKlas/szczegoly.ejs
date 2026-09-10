@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły profilu klasy: <%= profil.nazwa %></h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= profil.id %></dd>
+			<dt class="col-sm-3">nazwa:</dt>
+			<dd class="col-sm-9"><%= profil.nazwa %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/profile-klas/delete/<%= profil.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/profile-klas/update/<%= profil.id %>">Edytuj</a>
+		</div>
+	</div>
+</div>

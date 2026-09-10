@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły oceny</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= ocena.id %></dd>
+			<dt class="col-sm-3">uczeń:</dt>
+			<dd class="col-sm-9"><%= ocena.imie_ucznia %> <%= ocena.nazwisko_ucznia %></dd>
+			<dt class="col-sm-3">przedmiot:</dt>
+			<dd class="col-sm-9"><%= ocena.nazwa_przedmiotu %></dd>
+			<dt class="col-sm-3">nauczyciel:</dt>
+			<dd class="col-sm-9"><%= ocena.imie_nauczyciela %> <%= ocena.nazwisko_nauczyciela %></dd>
+			<dt class="col-sm-3">wartość:</dt>
+			<dd class="col-sm-9"><strong><%= ocena.wartosc %></strong></dd>
+			<dt class="col-sm-3">opis:</dt>
+			<dd class="col-sm-9"><%= ocena.opis || '-' %></dd>
+			<dt class="col-sm-3">data:</dt>
+			<dd class="col-sm-9"><%= ocena.data %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/oceny/delete/<%= ocena.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/oceny/update/<%= ocena.id %>">Edytuj</a>
+		</div>
+	</div>
+</div>

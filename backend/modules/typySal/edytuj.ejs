@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Edytuj typ sali</h1>
+	</div>
+</div>
+<form method="post" action="/typy-sal/update">
+	<input type="hidden" name="id" value="<%= typ.id %>" />
+	<div class="row">
+		<div class="col-12 mb-3">
+			<label for="nazwa" class="form-label">nazwa</label>
+			<input type="text" name="nazwa" id="nazwa" value="<%= typ.nazwa %>" class="form-control" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Anuluj</button>
+			<button type="submit" class="btn btn-primary">Zapisz</button>
+		</div>
+	</div>
+</form>

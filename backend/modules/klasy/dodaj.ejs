@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Dodaj klasę</h1>
+	</div>
+</div>
+<form method="post" action="/klasy/add">
+	<div class="row">
+		<div class="col-12 col-md-4 mb-3">
+			<label for="nazwa" class="form-label">nazwa</label>
+			<input type="text" name="nazwa" id="nazwa" class="form-control" />
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_profilu_klasy" class="form-label">Profil klasy</label>
+			<%- profile_klas %>
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_wychowawcy" class="form-label">wychowawca</label>
+			<%- nauczyciele %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Anuluj</button>
+			<button type="submit" class="btn btn-primary">Dodaj</button>
+		</div>
+	</div>
+</form>

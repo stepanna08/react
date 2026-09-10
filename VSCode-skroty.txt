@@ -1,0 +1,13 @@
+komentarz               	CTRL + /
+linie
+	zawijanie         		ALT + Z
+	duplikowanie      		SHIFT + ALT + GORA/DOL
+	przenoszenie w dół		ALT + DOL
+	przenoszenie w górę		ALT + GORA
+duplikowanie kursora    	CTRL + SHIFT + ALT + GORA/DOL
+                        	ALT + click
+lista plikow
+	aktywacja/deaktywacja  	CTRL + SHIFT + E
+terminal
+	aktywacja/deaktywacja	CTRL + ~
+	utwórz nowy				CTRL + SHIFT + ~

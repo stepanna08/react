@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Lista klas</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<ul class="list-group">
+			<% klasy.forEach(klasa => { %>
+				<li class="list-group-item">
+					<a href="/klasy/details/<%= klasa.id %>">
+						<%= klasa.nazwa %>
+					</a>
+				</li>
+			<% }) %>
+		</ul>
+		<p class="mt-3"><a class="btn btn-primary" href="/klasy/add">Dodaj klasę</a></p>
+	</div>
+</div>

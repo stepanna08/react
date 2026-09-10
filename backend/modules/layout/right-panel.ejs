@@ -1,0 +1,13 @@
+		<div class="right-panel col-md-9 col-lg-10">
+			<div id="content">
+				<% if (flashError.length) { %>
+					<div class="alert alert-danger"><%- flashError %></div>
+				<% } %>
+				<% if (flashSuccess.length) { %>
+					<div class="alert alert-success"><%- flashSuccess %></div>
+				<% } %>
+
+				<%- content %>
+
+			</div>
+		</div>

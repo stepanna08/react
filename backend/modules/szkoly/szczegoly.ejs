@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły szkoły: <%= szkola.nazwa %></h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= szkola.id %></dd>
+			<dt class="col-sm-3">nazwa:</dt>
+			<dd class="col-sm-9"><%= szkola.nazwa %></dd>
+			<dt class="col-sm-3">adres:</dt>
+			<dd class="col-sm-9"><%= szkola.adres %></dd>
+			<dt class="col-sm-3">telefon:</dt>
+			<dd class="col-sm-9"><%= szkola.telefon %></dd>
+			<dt class="col-sm-3">email:</dt>
+			<dd class="col-sm-9"><%= szkola.email %></dd>
+			<dt class="col-sm-3">www:</dt>
+			<dd class="col-sm-9"><%= szkola.www %></dd>
+			<dt class="col-sm-3">Dyrektor:</dt>
+			<dd class="col-sm-9"><%= szkola.imie %> <%= szkola.nazwisko %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/szkoly/delete/<%= szkola.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/szkoly/update">Edytuj</a>
+		</div>
+	</div>
+</div>

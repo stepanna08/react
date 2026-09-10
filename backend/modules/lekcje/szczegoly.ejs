@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły lekcji</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= lekcja.id %></dd>
+			<dt class="col-sm-3">nazwa:</dt>
+			<dd class="col-sm-9"><%= lekcja.nazwa %></dd>
+			<dt class="col-sm-3">klasa:</dt>
+			<dd class="col-sm-9"><%= lekcja.nazwa_klasy %></dd>
+			<dt class="col-sm-3">przedmiot:</dt>
+			<dd class="col-sm-9"><%= lekcja.nazwa_przedmiotu %></dd>
+			<dt class="col-sm-3">nauczyciel:</dt>
+			<dd class="col-sm-9"><%= lekcja.imie %> <%= lekcja.nazwisko %></dd>
+			<dt class="col-sm-3">sala:</dt>
+			<dd class="col-sm-9"><%= lekcja.nazwa_sali %></dd>
+			<dt class="col-sm-3">dzień tygodnia:</dt>
+			<dd class="col-sm-9"><%= lekcja.dzien_tygodnia %></dd>
+			<dt class="col-sm-3">godzina lekcyjna:</dt>
+			<dd class="col-sm-9"><%= lekcja.godzina_lekcyjna %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/lekcje/delete/<%= lekcja.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/lekcje/update/<%= lekcja.id %>">Edytuj</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Lista uczniów</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<ul class="list-group">
+			<% uczniowie.forEach(uczen => { %>
+				<li class="list-group-item">
+					<a href="/uczniowie/details/<%= uczen.id %>">
+						<%= uczen.imie %> <%= uczen.nazwisko %>
+					</a>
+				</li>
+			<% }) %>
+		</ul>
+		<p class="mt-3"><a class="btn btn-primary" href="/uczniowie/add">Dodaj ucznia</a></p>
+	</div>
+</div>

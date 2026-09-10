@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły typu tablicy: <%= typ.nazwa %></h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= typ.id %></dd>
+			<dt class="col-sm-3">nazwa:</dt>
+			<dd class="col-sm-9"><%= typ.nazwa %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/typy-tablic/delete/<%= typ.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/typy-tablic/update/<%= typ.id %>">Edytuj</a>
+		</div>
+	</div>
+</div>

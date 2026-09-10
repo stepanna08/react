@@ -1,0 +1,53 @@
+{
+	"settings": {
+		"[txt]": {
+			"editor.tabSize": 4,
+			"editor.insertSpaces": true,
+			"editor.autoIndent": "advanced"
+		},
+		"[yaml]": {
+			"editor.tabSize": 4,
+			"editor.insertSpaces": false,
+			"editor.autoIndent": "advanced"
+		},
+		"editor.accessibilityPageSize": 5000,
+		"editor.autoIndent": "advanced",
+		"editor.autoIndentOnPaste": true,
+		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+		"editor.detectIndentation": false,
+		"editor.indentSize": "tabSize",
+		"editor.insertSpaces": false,
+		"editor.minimap.enabled": false,
+		"editor.tabSize": 4,
+		"editor.wordWrap": "on",
+		"files.eol": "\n",
+		"files.insertFinalNewline": false,
+		"files.trimFinalNewlines": true,
+		"files.trimTrailingWhitespace": true,
+		"github.copilot.nextEditSuggestions.enabled": true,
+		"js/ts.updateImportsOnFileMove.enabled": "always",
+		"php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+		"chat.viewSessions.orientation": "stacked",
+		"git.confirmSync": false,
+		"github.copilot.enable": {
+			"*": true,
+			"plaintext": true,
+			"markdown": true,
+			"scminput": true
+		},
+		"notebook.insertFinalNewline": false,
+		"window.zoomLevel": 0,
+		"workbench.colorTheme": "Default High Contrast",
+		"workbench.preferredDarkColorTheme": "Default High Contrast",
+		"workbench.preferredLightColorTheme": "Default High Contrast Light",
+		"editor.rulers": [
+			80
+		],
+		"security.workspace.trust.untrustedFiles": "open",
+		"explorer.fileNesting.enabled": true
+	},
+	"folders": [
+		{	"path": "."
+		},
+	]
+}

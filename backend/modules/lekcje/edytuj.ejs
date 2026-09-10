@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Edytuj lekcję</h1>
+	</div>
+</div>
+<form method="post" action="/lekcje/update">
+	<input type="hidden" name="id" value="<%= lekcja.id %>" />
+	<div class="row">
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_klasy" class="form-label">klasa</label>
+			<%- klasy %>
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_przedmiotu" class="form-label">przedmiot</label>
+			<%- przedmioty %>
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_sali" class="form-label">sala</label>
+			<%- sale %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-4 mb-3">
+			<label for="id_nauczyciela" class="form-label">nauczyciel</label>
+			<%- nauczyciele %>
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="dzien_tygodnia" class="form-label">dzień tygodnia</label>
+			<%- dniTygodnia %>
+		</div>
+		<div class="col-12 col-md-4 mb-3">
+			<label for="godzina_lekcyjna" class="form-label">godzina lekcyjna</label>
+			<%- godzinyLekcyjne %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-4 mb-3">
+			<label for="nazwa" class="form-label">nazwa</label>
+			<input type="text" name="nazwa" id="nazwa" value="<%= lekcja.nazwa %>" class="form-control" />
+		</div>
+	</div>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" onclick="window.history.back()">Anuluj</button>
+		<button type="submit" class="btn btn-primary">Zapisz</button>
+	</div>
+</form>

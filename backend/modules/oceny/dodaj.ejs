@@ -1,0 +1,61 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Dodaj ocenę</h1>
+	</div>
+</div>
+<form method="post" action="/oceny/add">
+	<div class="row">
+		<div class="col-12 col-md-6 mb-3">
+			<label for="id_ucznia" class="form-label">uczeń</label>
+			<%- uczniowieSelect %>
+		</div>
+		<div class="col-12 col-md-6 mb-3">
+			<label for="id_przedmiotu" class="form-label">przedmiot</label>
+			<%- przedmiotySelect %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-6 mb-3">
+			<label for="id_nauczyciela" class="form-label">nauczyciel</label>
+			<%- nauczycieleSelect %>
+		</div>
+		<div class="col-12 col-md-3 mb-3">
+			<label for="wartosc" class="form-label">wartość</label>
+			<select name="wartosc" id="wartosc" class="form-select">
+				<option value="">-- Wybierz ocenę --</option>
+				<option value="1-">1-</option>
+				<option value="1">1</option>
+				<option value="1+">1+</option>
+				<option value="2-">2-</option>
+				<option value="2">2</option>
+				<option value="2+">2+</option>
+				<option value="3-">3-</option>
+				<option value="3">3</option>
+				<option value="3+">3+</option>
+				<option value="4-">4-</option>
+				<option value="4">4</option>
+				<option value="4+">4+</option>
+				<option value="5-">5-</option>
+				<option value="5">5</option>
+				<option value="5+">5+</option>
+				<option value="6-">6-</option>
+				<option value="6">6</option>
+				<option value="6+">6+</option>
+			</select>
+		</div>
+		<div class="col-12 col-md-3 mb-3">
+			<label for="data" class="form-label">data</label>
+			<input type="date" name="data" id="data" class="form-control" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 mb-3">
+			<label for="opis" class="form-label">opis</label>
+			<textarea name="opis" id="opis" class="form-control" rows="3"></textarea>
+		</div>
+	</div>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" onclick="window.history.back()">Anuluj</button>
+		<button type="submit" class="btn btn-primary">Dodaj</button>
+	</div>
+</form>

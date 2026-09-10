@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Edytuj przedmiot</h1>
+	</div>
+</div>
+<form method="post" action="/przedmioty/update">
+	<input type="hidden" name="id" value="<%= przedmiot.id %>" />
+	<div class="mb-3">
+		<label for="nazwa" class="form-label">nazwa</label>
+		<input type="text" name="nazwa" id="nazwa" value="<%= przedmiot.nazwa %>" class="form-control" />
+	</div>
+	<div class="mt-3">
+		<button type="button" class="btn btn-secondary" onclick="window.history.back()">Anuluj</button>
+		<button type="submit" class="btn btn-primary">Zapisz</button>
+	</div>
+</form>

@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-12">
+		<h1>Szczegóły nauczyciela</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<dl class="row">
+			<dt class="col-sm-3">id:</dt>
+			<dd class="col-sm-9"><%= nauczyciel.id %></dd>
+			<dt class="col-sm-3">imię:</dt>
+			<dd class="col-sm-9"><%= nauczyciel.imie %></dd>
+			<dt class="col-sm-3">nazwisko:</dt>
+			<dd class="col-sm-9"><%= nauczyciel.nazwisko %></dd>
+			<dt class="col-sm-3">email:</dt>
+			<dd class="col-sm-9"><%= nauczyciel.email %></dd>
+			<dt class="col-sm-3">telefon:</dt>
+			<dd class="col-sm-9"><%= nauczyciel.telefon %></dd>
+		</dl>
+		<div class="mt-3">
+			<button type="button" class="btn btn-secondary" onclick="window.history.back()">Powrót</button>
+			<button class="btn btn-danger" onclick="usun('/nauczyciele/delete/<%= nauczyciel.id %>')">Usuń</button>
+			<a class="btn btn-primary" href="/nauczyciele/update/<%= nauczyciel.id %>">Edytuj</a>
+		</div>
+	</div>
+</div>

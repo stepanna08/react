@@ -1,0 +1,26 @@
+<% if (dodajSzkole) { %>
+	<div class="alert alert-success" role="alert"><%= dodajSzkole %></div>
+<% } %>
+<div class="row">
+	<div class="col-12">
+		<h1>Lista szkół</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-12">
+		<% if (szkoly.length) { %>
+			<ul class="list-group">
+				<% szkoly.forEach(szkola => { %>
+					<li class="list-group-item">
+						<a href="/szkoly/select/<%= szkola.id %>">
+							<%= szkola.nazwa %>
+						</a>
+					</li>
+				<% }) %>
+			</ul>
+		<% } else { %>
+			<p>brak szkół</p>
+		<% } %>
+		<p class="mt-3"><a class="btn btn-primary" href="/szkoly/add">Dodaj szkołę</a></p>
+	</div>
+</div>
