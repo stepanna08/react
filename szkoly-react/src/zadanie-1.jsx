@@ -18,7 +18,7 @@ function ArticleParent(){
     return ( <Article title = {title} author = {author} content = {content} />)
 }
 
-function Article(props) {
+export function Article(props) {
     return (<div>
         <h2>Tytuł: {props.title}</h2>
         <p>Autor: {props.author}</p>

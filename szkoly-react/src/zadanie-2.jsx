@@ -6,8 +6,8 @@
 
 	Wyświetl dane w karcie osoby.
 */
-function PersonCard({firstname,lastname,age,occupation = "Bez zawodu"}){
-    const {firstname,lastname,age,occupation} = props;
+export function PersonCard({firstname,lastname,age,occupation = "Bez zawodu"}){
+    //const {firstname,lastname,age,occupation} = props;
     return (<div>
         <p>Nazwisko: {lastname}</p>
         <p>Imię: {firstname}</p>

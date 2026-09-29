@@ -4,6 +4,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import { Abc } from './a'
+import {Article } from './zadanie-1'
+import {PersonCard } from './zadanie-2'
+import {MovieList } from './zadanie-3'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +14,12 @@ function App() {
   return (
     <>
       <section id="center">
+        <Article author= "Anna Stopy" title = "Food" content = "Lubiem jeść"/>
+        <PersonCard lastname= "Stopy" firstname = "Anna" age = "18" />
+        	<MovieList movies={[
+	        { id: 1, title: "Inception", year: 2010, rating: 8.8 },
+	        { id: 2, title: "Avatar", year: 2009, rating: 8.5 }
+	        ]} />
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
