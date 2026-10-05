@@ -158,7 +158,7 @@ function Child({ onMessage }) {
 	<p>Zawartość artykułu</p>
 
 	Dodaj PropTypes do walidacji danych.
-	Użycie: <Article title="React 18" author="Jan" content="React jest super!" />
+	ZZZUżycie: <Article title="React 18" author="Jan" content="React jest super!" />
 /
 
 /*	Zadanie praktyczne 2: Komponent Person Card

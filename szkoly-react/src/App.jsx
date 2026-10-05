@@ -7,6 +7,9 @@ import { Abc } from './a'
 import {Article } from './zadanie-1'
 import {PersonCard } from './zadanie-2'
 import {MovieList } from './zadanie-3'
+import { TrybKoloru } from './zadanie-1use'
+import { OcenyUcznia } from './zadanie-2use'
+import { ListaObecnosci } from './zadanie-3use'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +42,9 @@ function App() {
           Count is {count}
         </button>
         <Abc />
+        <TrybKoloru></TrybKoloru>
+        <OcenyUcznia></OcenyUcznia>
+        <ListaObecnosci></ListaObecnosci>
       </section>
 
       <div className="ticks"></div>

@@ -31,7 +31,7 @@
 
 /*	Czym jest hook?
 	Hook (hak) to specjalna funkcja Reacta, której można używać tylko wewnątrz
-	komponentów funkcyjnych. Jej nazwa zawsze zaczyna się od słowa "use".
+	komponentów funkcyjnych. Jej nazzwa zawsze zaczyna się od słowa "use".
 
 	Przykładowe haki:
 	- useState   - do przechowywania stanu
@@ -421,6 +421,7 @@
 			: 0;
 	)
 */
+
 
 /*	Zadanie 3 - Średnie (Lista obecności)
 	Stwórz komponent 'ListaObecnosci', który:
