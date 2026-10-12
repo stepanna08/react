@@ -16,14 +16,30 @@ function tytulStrony() {
 		</button>
 	);
 }
+	const interval = setInterval(() => {
+    console.log('This will be called every 2 seconds');
+  }, 2000);
 */
 
-function zegar() {
-    const [zegar, setZegar] = useState(0)
-
+export function Zegar() {
+	let data = new Date(); // 8:00
+	const [aktualnyCzas, setAktualnyCzas] = useState((new Date()).getTime())
     useEffect(() => {
-        document.title = zegar;
-        
+		const czas = setInterval(()=>{
+			setAktualnyCzas((new Date()).getTime())
 
-    })
+		},100)
+		return () => {
+			clearInterval(czas)
+		}
+    });
+	const wyswietlCzas = () => {
+		data.setTime(aktualnyCzas);
+		return data.toLocaleTimeString();
+	}
+	return (
+		<div>
+			<p>{wyswietlCzas()}</p>
+		</div>
+	)
 }

@@ -10,6 +10,8 @@ import {MovieList } from './zadanie-3'
 import { TrybKoloru } from './zadanie-1use'
 import { OcenyUcznia } from './zadanie-2use'
 import { ListaObecnosci } from './zadanie-3use'
+import {Zegar} from './useef-zad-1.jsx'
+import InfoUczen from './war-zad1.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +19,8 @@ function App() {
   return (
     <>
       <section id="center">
+        <Zegar/>
+        <InfoUczen uczen = "ANNA" czyObecny={false} numerDziennika={12}/>
         <Article author= "Anna Stopy" title = "Food" content = "Lubiem jeść"/>
         <PersonCard lastname= "Stopy" firstname = "Anna" age = "18" />
         	<MovieList movies={[
