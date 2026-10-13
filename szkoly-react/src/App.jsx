@@ -1,4 +1,36 @@
-import { useState } from 'react'
+import PrzyciskZapisz from './war-zad2.jsx'
+import KartaUcznia from './wat-zad3.jsx'
+import { ListaPrzedmiotow } from './list-zad1.jsx'
+
+function App(){
+  return (<>
+  <PrzyciskZapisz/>
+  <KartaUcznia imie = "ANNA" klasa = "4tp" srednia={2} czyAktywny={true}/>
+  <ListaPrzedmiotow/>
+  </>)
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -11,14 +43,18 @@ import { TrybKoloru } from './zadanie-1use'
 import { OcenyUcznia } from './zadanie-2use'
 import { ListaObecnosci } from './zadanie-3use'
 import {Zegar} from './useef-zad-1.jsx'
-import InfoUczen from './war-zad1.jsx'
-
+import InfoUczen from './war-zad1.jsx'*/
+/*
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
+
+
+return (
     <>
       <section id="center">
+        <PrzyciskZapisz/>
+
         <Zegar/>
         <InfoUczen uczen = "ANNA" czyObecny={false} numerDziennika={12}/>
         <Article author= "Anna Stopy" title = "Food" content = "Lubiem jeść"/>
@@ -139,5 +175,4 @@ function App() {
     </>
   )
 }
-
-export default App
+*/

@@ -24,8 +24,6 @@ export function Zegar() {
 }
 */
 /*
-	import { useState, useEffect } from 'react';
-
 	function ZapisywaczNotatek() {
 		// Przy inicjalizacji stanu czytamy z localStorage
 		// Jeśli nie ma zapisanych notatek, używamy pustego ciągu
@@ -65,4 +63,8 @@ export function Zegar() {
 	}
 */
 
-
+export function PowitanieZBazy(){
+	const [uczen, setUczen] = useState(() => {
+		return localStorage.getItem('imie-ucznia') || 'Nieznajomy';
+	});
+}

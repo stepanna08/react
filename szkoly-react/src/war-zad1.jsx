@@ -1,15 +1,11 @@
 import { useState } from "react";
 
-export default function InfoUczen({uczen = "Pyrka",czyObecny = true,numerDziennika = 14}){
+export default function InfoUczen({uczen,czyObecny,numerDziennika}){
     return (<>
-    <PrzykladAND></PrzykladAND>
-    
+    <PrzykladAND uczen = {uczen} czyObecny={czyObecny} numerDziennika={numerDziennika}></PrzykladAND>
     </>)
 }
-function PrzykladAND(){
-    /*const uczen = "Pyrka"
-    const czyObecny = true
-    const numerDziennika = 14*/
+function PrzykladAND({uczen,czyObecny,numerDziennika}){
     return (<>
     <p>{uczen},{numerDziennika}</p>
     {czyObecny && (<p>obecny</p>)}
