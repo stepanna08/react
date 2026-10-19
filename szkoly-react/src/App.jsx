@@ -1,12 +1,11 @@
-import PrzyciskZapisz from './war-zad2.jsx'
-import KartaUcznia from './wat-zad3.jsx'
-import { ListaPrzedmiotow } from './list-zad1.jsx'
+import { SchoolHeader, SchoolNameProvider } from "./cont-zad1"
+
 
 function App(){
   return (<>
-  <PrzyciskZapisz/>
-  <KartaUcznia imie = "ANNA" klasa = "4tp" srednia={2} czyAktywny={true}/>
-  <ListaPrzedmiotow/>
+    <SchoolNameProvider>
+      <SchoolHeader/>
+    </SchoolNameProvider>
   </>)
 }
 
@@ -30,7 +29,23 @@ export default App
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*import { useState } from 'react'
+import PrzyciskZapisz from './war-zad2.jsx'
+import KartaUcznia from './wat-zad3.jsx'
+import { ListaPrzedmiotow } from './list-zad1.jsx'
+import { KartaKlasy } from './list-zad2.jsx'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -52,7 +67,12 @@ function App() {
 
 return (
     <>
+
       <section id="center">
+        <PrzyciskZapisz/>
+  <KartaUcznia imie = "ANNA" klasa = "4tp" srednia={2} czyAktywny={true}/>
+  <ListaPrzedmiotow/>
+  <KartaKlasy/>
         <PrzyciskZapisz/>
 
         <Zegar/>
