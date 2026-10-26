@@ -1,4 +1,5 @@
 import { SchoolHeader, SchoolNameProvider } from "./cont-zad1"
+import { ClassChanger, StudentInfo, UczenProvider } from "./cont-zad2"
 
 
 function App(){
@@ -6,6 +7,10 @@ function App(){
     <SchoolNameProvider>
       <SchoolHeader/>
     </SchoolNameProvider>
+    <UczenProvider>
+      <StudentInfo></StudentInfo>
+      <ClassChanger></ClassChanger>
+    </UczenProvider>
   </>)
 }
 

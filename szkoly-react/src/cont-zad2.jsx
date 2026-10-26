@@ -36,3 +36,27 @@ export function SchoolHeader(){
 
 import { createContext, useContext, useState } from "react";
 
+const ZmianaKlasyContext = createContext(null);
+export function UczenProvider({ children }){
+	const [uczen, setUczen] = useState({ name: 'Jan Kowalski', class: '1A' });
+
+	const changeClass = (klasa) => {
+		setUczen(uczen.class = klasa)
+	}
+	return (<ZmianaKlasyContext.Provider value = {{uczen,changeClass}}>
+		{children}
+	</ZmianaKlasyContext.Provider>)
+}
+export function StudentInfo(){
+	const {uczen} = useContext(ZmianaKlasyContext);
+	return(<>
+	{uczen.name}
+	</>)
+
+}
+export function ClassChanger(){
+	const {changeClass} = useContext(ZmianaKlasyContext);
+	return (<>
+	<button onClick={changeClass("A")}>KLASA a</button>
+	</>)
+}
